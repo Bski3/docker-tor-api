@@ -19,8 +19,13 @@ Run the following commands in the container:
 cat /var/lib/tor/hidden_service/hostname 
 cat authorized_clients/torkey.auth_private && rm authorized_clients/torkey.auth_private
 systemctl restart tor && service tor restart
-
 python3 main.py
+```
+or download script to run these commands:
+```
+wget https://raw.githubusercontent.com/Bski3/docker-tor-api/main/docker-tor-api/commands.sh
+chmod +x commands.sh
+sudo ./commands.sh
 ```
 
 ### Pulling and running from Docker repo

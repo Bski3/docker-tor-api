@@ -1,6 +1,6 @@
 # docker-tor-api
 ## Building from Dockerfile
-Sets up a docker container running a Flask hello world API reachable through TOR
+Sets up a docker container running a Flask hello world API reachable through TOR with private key authentication
 
 If any errors occur and a redo is necessary, run the following command to remove all traces of “flask”:
 ```

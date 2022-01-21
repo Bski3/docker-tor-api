@@ -53,8 +53,8 @@ RUN sudo find /var/lib/tor/hidden_service -type d | sudo xargs chmod u+rwx,go=
 WORKDIR /var/lib/tor/hidden_service
 
 #download main.py Flask script and make it executable:
-RUN wget https://raw.githubusercontent.com/Bski3/docker-tor-api/main/docker-tor-api/main.py
-RUN sudo chmod +x main.py
+#RUN wget https://raw.githubusercontent.com/Bski3/docker-tor-api/main/docker-tor-api/main.py
+#RUN sudo chmod +x main.py
 
 #copy to the hidden service webroot directory:
 COPY main.py /var/lib/tor/hidden_service
@@ -93,8 +93,7 @@ RUN sudo python3 -m venv virtualenv
 #print onion address + keys during build and delete private key. Save it for reuse:
 RUN echo “onion address:” && sudo cat /var/lib/tor/hidden_service/hostname
 RUN echo “pub key:” && sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth
-RUN echo “private key, deleting after print. Save it for reuse:” && sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private && sudo rm /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
+RUN echo “private key, save it somewhere for reuse and delete from container:” && sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
 
 #set user to start as:
 #USER toruser
-

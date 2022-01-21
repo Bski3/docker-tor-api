@@ -9,7 +9,7 @@ Run this command to build the container out of current working directory and tag
 ```
 docker build --rm --file Dockerfile -t flask . 
 ```
-Copy the onion address and private key from the Build output:
+Copy the onion address and private key from the Build output for user authentication in browser:
 ```
 <onion address - .onion extension>:descriptor:x25519:<COPY THE STRING LOCATED HERE>
 ```

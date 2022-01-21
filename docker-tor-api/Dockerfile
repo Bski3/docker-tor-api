@@ -94,6 +94,7 @@ RUN sudo python3 -m venv virtualenv
 RUN echo “onion address:” && sudo cat /var/lib/tor/hidden_service/hostname
 RUN echo “pub key:” && sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth
 RUN echo “private key, save it somewhere for reuse and delete from container:” && sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
+RUN echo “now run the commands.sh“
 
 #set user to start as:
 #USER toruser

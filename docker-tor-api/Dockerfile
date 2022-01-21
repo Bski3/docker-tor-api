@@ -53,7 +53,7 @@ RUN sudo find /var/lib/tor/hidden_service -type d | sudo xargs chmod u+rwx,go=
 WORKDIR /var/lib/tor/hidden_service
 
 #download main.py Flask script and make it executable:
-RUN wget https://github.com/Bski3/docker-tor-api/main.py
+RUN wget https://raw.githubusercontent.com/Bski3/docker-tor-api/main/docker-tor-api/main.py
 RUN sudo chmod +x main.py
 
 #copy to the hidden service webroot directory:

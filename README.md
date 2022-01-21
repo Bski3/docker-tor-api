@@ -29,7 +29,7 @@ sudo ./commands.sh
 ```
 
 ## Pulling and running from Docker repo
-If you have an image pulled from my bski3/tor-flask-api Docker repo run these commands:
+If you have an image pulled ```docker pull bski3/tor-flask-api``` from my Docker repo run these commands:
 ```
 docker pull bski3/tor-flask-api
 ```

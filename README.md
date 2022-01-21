@@ -21,4 +21,25 @@ systemctl restart tor && service tor restart
 
 python3 main.py
 ```
-
+If you have an image pulled from my bski3/tor-flask-api Docker repo run these commands:
+```
+sudo python3 tor-auth-x25519-gen.py -d "$(sudo cat hostname)" -f authorized_clients/torkey
+```
+```
+sudo systemctl restart tor
+```
+```
+sudo service tor restart
+```
+```
+cat /var/lib/tor/hidden_service/hostname
+```
+```
+echo “private key, save it somewhere for reuse and delete from container:” && sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
+```
+```
+sudo rm /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
+```
+```
+python3 main.py
+```

@@ -15,6 +15,6 @@ Copy the onion address and private key from the Build output for user authentica
 ```
 Run the following commands in the container:
 ```
-systemctl restart tor && service tor restart && python3 main.py
+cat /var/lib/tor/hidden_service/hostname && cat /tmp/torkey.auth_private && systemctl restart tor && service tor restart && python3 main.py
 ```
 

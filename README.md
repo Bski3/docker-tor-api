@@ -28,7 +28,7 @@ chmod +x commands.sh
 sudo ./commands.sh
 ```
 
-### Pulling and running from Docker repo
+## Pulling and running from Docker repo
 If you have an image pulled from my bski3/tor-flask-api Docker repo run these commands:
 ```
 sudo python3 tor-auth-x25519-gen.py -d "$(sudo cat hostname)" -f authorized_clients/torkey

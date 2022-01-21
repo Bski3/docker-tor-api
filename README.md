@@ -38,7 +38,7 @@ sudo service tor restart
 cat /var/lib/tor/hidden_service/hostname
 ```
 ```
-echo “print private key, delete from container:” && sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
+sudo cat /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
 ```
 ```
 sudo rm /var/lib/tor/hidden_service/authorized_clients/torkey.auth_private
